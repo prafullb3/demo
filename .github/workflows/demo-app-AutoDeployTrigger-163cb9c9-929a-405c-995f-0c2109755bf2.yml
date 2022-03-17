@@ -7,7 +7,7 @@ on:
     branches: 
       [ main ]
     paths:
-    - ''
+    - './**'
 
   # Allow mannually trigger 
   workflow_dispatch:      
@@ -35,7 +35,7 @@ jobs:
         with:
           push: true
           tags: containerappsregistry1.azurecr.io/demo-app:${{ github.sha }}
-          context: /Dockerfile
+          context: ./Dockerfile
 
 
   deploy:
